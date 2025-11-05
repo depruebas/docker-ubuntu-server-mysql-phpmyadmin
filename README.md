@@ -6,6 +6,25 @@
 
 
 ## Instrucciones de uso:
+
+
+Para utilizar este entorno, clonar el repo:
+
+`git clone https://github.com/depruebas/docker-ubuntu-server-mysql-phpmyadmin.git`
+
+Entar en el directorio y ejecutar
+
+`make all` (mas abajo las instruccion del makefile) pero este comando construira por primera vez el docker y lo activara.
+
+`make shell` para entrar en la shell de ubuntu server
+
+`localhost:8889` para acceder al phpMyAdmin y root / root para usuario y password del MySql
+
+Si ya teneis un puerto 8889 con algún servicio lo podeis cambiar en del docker-compose.yml
+
+
+
+## Esquema de directorios y archivos
  
 docker:  directorio donde estan los ficheros de configuración del entorno
 
@@ -15,7 +34,7 @@ docker:  directorio donde estan los ficheros de configuración del entorno
      - entrypoint.sh, se ejecuta al realizar un build de la imagen, configura apache2, MySql y phpMyAdmin
    
 
-temp: directorio temporal para traspasar cosas al contenedor, podria ser el directorio donde esta el proyeto web.
+temp: directorio temporal para traspasar cosas al contenedor, podria ser el directorio donde esta el proyeto web. Este directorio temp se crea dentro del directorio /data en el contenedo, lo he creado para ir enlazando todos los directorios de nuesto hosts que necesitemos, por ejemplo, los del código.
 
 Makefile: fichero para ejecutar comandos docker.
 
