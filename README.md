@@ -31,8 +31,9 @@
 docker:  directorio donde estan los ficheros de configuración del entorno
 
    - user_data: directorio del usuario /home/ubuntu donde se guarda la configuración. Solo se crea cuando se crea la imagen del contenedor, después los ficheros de configuración son persistentes
-   - provision: directorio donde estan los ficheros de configuración del servidor.
      - apache-vhost.conf, virtuahost de apache para phpMyAdmin. Si quieres mas web puedes añadir aqui los ficheros virtualhosts que necesites
+       
+   - provision: directorio donde estan los ficheros de configuración del servidor.
      - entrypoint.sh, se ejecuta al realizar un build de la imagen, configura apache2, MySql y phpMyAdmin
    
 
@@ -106,10 +107,9 @@ Entrar en el shell del contenedor
 docker: directory where the environment configuration files are located
 
    - user_data: user's /home/ubuntu directory where the configuration is stored. It is only created when the container image is created; after that, the configuration files are persistent.
+     - apache-vhost.conf: Apache virtual host for phpMyAdmin. If you want to add more websites, you can add the necessary virtual host files here.
 
   - provision: directory where the server configuration files are located.
-
-    - apache-vhost.conf: Apache virtual host for phpMyAdmin. If you want to add more websites, you can add the necessary virtual host files here.
   
     - entrypoint.sh: runs when building the image; it configures Apache2, MySQL, and phpMyAdmin.
 
