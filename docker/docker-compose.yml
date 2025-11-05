@@ -9,7 +9,7 @@ services:
     stdin_open: true
     volumes:
       - mysql-data:/var/lib/mysql
-      - ./config:/home/ubuntu
+      - ./user_data:/home/ubuntu
       - ../temp:/data/temp
 
     ports:
