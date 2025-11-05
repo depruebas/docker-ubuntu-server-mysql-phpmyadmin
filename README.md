@@ -82,7 +82,26 @@ Entrar en el shell del contenedor
 
 ### English version
 
-## Instructions for use:
+⚙️ ## Instructions for use:
+>
+>
+>To use this environment, clone the repository:
+>
+>`git clone https://github.com/depruebas/docker-ubuntu-server-mysql-phpmyadmin.git`
+>
+>Navigate to the directory and run:
+>
+>`make all` (see below for the makefile instructions), but this command will build Docker for the first time and activate it.
+>
+>`make shell` to enter the Ubuntu Server shell.
+>
+>`localhost:8889` to access phpMyAdmin and root /root for the MySQL username and password.
+>
+>If you already have port 8889 configured for another service, you can change it in the docker-compose.yml file.
+>
+
+
+## Directory and file scheme
 
 docker: directory where the environment configuration files are located
 
