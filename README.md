@@ -15,7 +15,7 @@ docker:  directorio donde estan los ficheros de configuración del entorno
      - entrypoint.sh, se ejecuta al realizar un build de la imagen, configura apache2, MySql y phpMyAdmin
    
 
-temp: directorio temporal para traspasar cosas al contenedor
+temp: directorio temporal para traspasar cosas al contenedor, podria ser el directorio donde esta el proyeto web.
 
 Makefile: fichero para ejecutar comandos docker.
 
