@@ -5,22 +5,24 @@
 ### In English below
 
 
-## Instrucciones de uso:
+## ⚙️ Instrucciones de uso:
+>
+>
+>Para utilizar este entorno, clonar el repo:
+>
+>`git clone https://github.com/depruebas/docker-ubuntu-server-mysql-phpmyadmin.git`
+>
+>Entar en el directorio y ejecutar
+>
+>`make all` (mas abajo las instruccion del makefile) pero este comando construira por primera vez el docker y lo activara.
+>
+>`make shell` para entrar en la shell de ubuntu server
+>
+>`localhost:8889` para acceder al phpMyAdmin y root / root para usuario y password del MySql
+>
+>Si ya teneis un puerto 8889 con algún servicio lo podeis cambiar en del docker-compose.yml
+>
 
-
-Para utilizar este entorno, clonar el repo:
-
-`git clone https://github.com/depruebas/docker-ubuntu-server-mysql-phpmyadmin.git`
-
-Entar en el directorio y ejecutar
-
-`make all` (mas abajo las instruccion del makefile) pero este comando construira por primera vez el docker y lo activara.
-
-`make shell` para entrar en la shell de ubuntu server
-
-`localhost:8889` para acceder al phpMyAdmin y root / root para usuario y password del MySql
-
-Si ya teneis un puerto 8889 con algún servicio lo podeis cambiar en del docker-compose.yml
 
 
 
