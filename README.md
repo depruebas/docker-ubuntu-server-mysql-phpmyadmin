@@ -1,5 +1,5 @@
 
-<img width="737" height="247" alt="image" src="https://github.com/user-attachments/assets/ca9ccedc-84c1-4577-9327-60f4ef48fb88" />
+<img width="737" height="247" alt="image" src="https://github.com/user-attachments/assets/e76d852f-58cd-441b-be45-3ccb4b2183eb" />
 
 
 In English below
@@ -7,3 +7,83 @@ In English below
 
 Instrucciones de uso:
  
+docker:  directorio donde estan los ficheros de configuración del entorno
+
+   - user_data: directorio del usuario /home/ubuntu donde se guarda la configuración. Solo se crea cuando se crea la imagen del contenedor, después los ficheros de configuración son persistentes
+   - provision: directorio donde estan los ficheros de configuración del servidor.
+     - apache-vhost.conf, virtuahost de apache para phpMyAdmin. Si quieres mas web puedes añadir aqui los ficheros virtualhosts que necesites
+     - entrypoint.sh, se ejecuta al realizar un build de la imagen, configura apache2, MySql y phpMyAdmin
+   
+
+temp: directorio temporal para traspasar cosas al contenedor
+
+Makefile: fichero para ejecutar comandos docker.
+
+
+El fichero Makefile es el que utilizaremos para enceder, parar y reconstruir el contenedor.
+
+
+Construir el contenedor
+
+`make build`
+
+Iniciar el contenedor
+
+`make all`
+
+Parar el contenedor
+
+`make stop`
+
+Parar y eliminar el contenedor
+
+`make down`
+
+Entrar en el shell del contenedor
+
+`make shell`
+
+
+
+<br><br>
+
+English version
+
+Instructions for use:
+
+docker: directory where the environment configuration files are located
+
+   - user_data: user's /home/ubuntu directory where the configuration is stored. It is only created when the container image is created; after that, the configuration files are persistent.
+
+  - provision: directory where the server configuration files are located.
+
+    - apache-vhost.conf: Apache virtual host for phpMyAdmin. If you want to add more websites, you can add the necessary virtual host files here.
+  
+    - entrypoint.sh: runs when building the image; it configures Apache2, MySQL, and phpMyAdmin.
+
+temp: temporary directory for transferring files to the container.
+
+Makefile: file for executing Docker commands. The Makefile is the file we will use to start, stop, and rebuild the container.
+
+
+
+Build the container
+
+`make build`
+
+Start the container
+
+`make all`
+
+Stop the container
+
+`make stop`
+
+Stop and remove the container
+
+`make down`
+
+Enter the container shell
+
+`make shell`
+
