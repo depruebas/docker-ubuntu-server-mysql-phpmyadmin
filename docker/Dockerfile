@@ -37,11 +37,11 @@ COPY ./provision/entrypoint.sh /opt/start/entrypoint.sh
 RUN chmod +x /opt/start/entrypoint.sh 
 
 # Configure apache2
-COPY ./provision/apache-vhost.conf /opt/start/apache-vhost.conf
-RUN ln -s /opt/start/apache-vhost.conf  /etc/apache2/sites-enabled/apache-vhost.conf
-RUN rm /etc/apache2/sites-enabled/000-default.conf
-RUN sed -i '$aListen 8080' /etc/apache2/ports.conf
-RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+# COPY ./provision/apache-vhost.conf /opt/start/apache-vhost.conf
+# RUN ln -s /opt/start/apache-vhost.conf  /etc/apache2/sites-enabled/apache-vhost.conf
+# RUN rm /etc/apache2/sites-enabled/000-default.conf
+# RUN sed -i '$aListen 8080' /etc/apache2/ports.conf
+# RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 WORKDIR /home/ubuntu
 

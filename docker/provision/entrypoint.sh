@@ -52,7 +52,12 @@ sed -i "s|\(\$cfg\['blowfish_secret'\] = \)'';|\1'$ESCAPED_SECRET';|" config.inc
 chown -R www-data:www-data /var/www/phpmyadmin
 chmod -R 755 /var/www/phpmyadmin
 
-# Init Apache2
+# Configure and Init Apache2
+ln -s /home/ubuntu/apache-vhost.conf  /etc/apache2/sites-enabled/apache-vhost.conf
+rm /etc/apache2/sites-enabled/000-default.conf
+sed -i '$aListen 8080' /etc/apache2/ports.conf
+echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
 apache2ctl -D FOREGROUND &
 
 ##
