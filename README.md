@@ -2,10 +2,10 @@
 <img width="737" height="247" alt="image" src="https://github.com/user-attachments/assets/e76d852f-58cd-441b-be45-3ccb4b2183eb" />
 
 
-In English below
+### In English below
 
 
-Instrucciones de uso:
+### Instrucciones de uso:
  
 docker:  directorio donde estan los ficheros de configuración del entorno
 
@@ -22,6 +22,18 @@ Makefile: fichero para ejecutar comandos docker.
 
 El fichero Makefile es el que utilizaremos para enceder, parar y reconstruir el contenedor.
 
+
+<br><br>
+### Iniciar proyecto
+
+Para iniciar el proyecto ejecutar `make all` desde el directorio raiz, todos los comandos make se lanzan desde el diretorio raiz donde esta el fichero Makefile.
+
+`make all` lo que hara es crear y construir el contenedor.
+
+
+
+<br><br>
+### Comandos `make`
 
 Construir el contenedor
 
@@ -47,9 +59,9 @@ Entrar en el shell del contenedor
 
 <br><br>
 
-English version
+### English version
 
-Instructions for use:
+### Instructions for use:
 
 docker: directory where the environment configuration files are located
 
@@ -65,6 +77,16 @@ temp: temporary directory for transferring files to the container.
 
 Makefile: file for executing Docker commands. The Makefile is the file we will use to start, stop, and rebuild the container.
 
+
+<br><br>
+### Starting the Project
+
+To start the project, run `make all` from the root directory. All `make` commands are launched from the root directory where the Makefile is located.
+
+`make all` will create and build the container.
+
+<br><br>
+### `make` Commands
 
 
 Build the container
